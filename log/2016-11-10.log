@@ -1,0 +1,8 @@
+2016-11-10 10:20:09 root         INFO     Server Started
+2016-11-10 10:20:11 root         INFO     Server Started
+2016-11-10 10:21:35 root         INFO     Server Started
+2016-11-10 10:25:55 root         INFO     Server Started
+2016-11-10 11:47:32 root         INFO     Server Started
+2016-11-10 11:47:32 py.warnings  WARNING  E:\PyCharm 2016.1.4\helpers\pydev\_pydev_bundle\pydev_import_hook.py:21: RemovedInDjango19Warning: The utilities in django.db.models.loading are deprecated in favor of the new application loading system.
+  module = self._system_import(name, *args, **kwargs)
+

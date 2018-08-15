@@ -1,0 +1,22 @@
+
+{% macro feature_widget(event, length=4) %}
+
+{% for e in event %}
+    {% if loop.index<=length %}
+    <div class="row featurette">
+        <div class="col-md-7 {% if loop.index in (2,4) %}col-md-push-5{% endif %}">
+            <h2 class="featurette-heading">{{ e.name }} <span class="text-muted">{{ e.begin_time|date('%Y年 %m月 %d日') }}</span>
+            </h2>
+            <p class="lead">{{ e.abstract }}</p>
+        </div>
+        <div class="col-md-5 {% if loop.index in(2,4) %}col-md-pull-7{% endif %}">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500"
+                 src="{{ e.photo.url }}"
+                 data-holder-rendered="true">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    {% endif %}
+{% endfor %}
+
+{% endmacro %}

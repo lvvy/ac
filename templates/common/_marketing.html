@@ -1,0 +1,17 @@
+
+{% macro mark_widget(person, length=3) %}
+
+      <!-- Three columns of text below the carousel -->
+
+    {% for p in person %}
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ p.photo.url }}" alt="{{ p.photo.name }}" width="140" height="140">
+          <h2>{{ p.name }}</h2>
+          <p>{{ p.abstract }}</p>
+          <p><a class="btn btn-default" href="#" role="button">查看详情 »</a></p>
+        </div><!-- /.col-lg-4 -->
+    {% endfor %}
+      </div><!-- /.row -->
+
+{% endmacro %}

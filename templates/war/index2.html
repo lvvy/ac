@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+
+    var timeline = [{% for even in events %}"{{ even.begin_time}}"  {% if not forloop.last %},{% endif %}{% endfor %}]
+    console.log(timeline)
+    var mapData = [{% for even in events %}
+        [{'event' : '{{ even.name }}','latitude':'{{ even.location.latitude }}','longitude':'{{ even.location.longitude }}','abstract':'{{event.abstract}}','value':'10'}] {% if not forloop.last %},{% endif %}
+
+    {% endfor %}
+    ]
+    console.log(mapData)
+
+app.title = 'war';
+
+var max = -Infinity;
+var min = Infinity;
+
+option = {
+    baseOption: {
+            timeline: {
+                axisType: 'category',
+                orient: 'vertical',
+                autoPlay: true,
+                inverse: true,
+                playInterval: 3000,
+                left: null,
+                right: 0,
+                top: 20,
+                bottom: 20,
+                width: 55,
+                height: null,
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: '#999'
+                        }
+                    },
+                    emphasis: {
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                symbol: 'none',
+                lineStyle: {
+                    color: '#555'
+                },
+                checkpointStyle: {
+                    color: '#bbb',
+                    borderColor: '#777',
+                    borderWidth: 2,
+                },
+                controlStyle: {
+                    showNextBtn: false,
+                    showPrevBtn: false,
+                    normal: {
+                        color: '#666',
+                        borderColor: '#666'
+                    },
+                    emphasis: {
+                        color: '#aaa',
+                        borderColor: '#aaa'
+                    }
+                },
+                data: []
+            },
+
+{#        backgroundColor: '#404a59',#}
+        backgroundColor: '#044161',
+        title: [{
+            'text': timeline[0],
+            textAlign: 'center',
+            left: '10%',
+            top: '75%',
+            textStyle: {
+                fontSize: 100,
+                color: 'rgba(255, 255, 255, 0.7)'
+            }
+        }],
+        tooltip: {
+            trigger: 'item',
+            formatter: function (params) {
+                var value = (params.value + '').split('.');
+                value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,')
+                        + '.' + value[1];
+                return params.seriesName + '<br/>' + params.name + ' : ' + value;
+            }
+        },
+        visualMap: {
+            show: false,
+            min: 0,
+            max: max,
+            inRange: {
+                symbolSize: [6, 60]
+            }
+        },
+        geo: {
+            center: [60,-20],
+            name: '',
+            type: 'map',
+            map: 'world',
+            zoom:6,
+            roam: true,
+            scaleLimit: {
+                min: 1
+            },
+            label: {
+                emphasis: {
+                    textStyle: {
+                        color:'#FFFFFF',
+                        fontFamily  :30
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+{#                    areaColor: '#323c48',#}
+{#                    borderColor: '#111'#}
+                    areaColor: '#081734',
+                    borderColor: '#313131'
+                },
+                emphasis: {
+                    areaColor: '#000033'
+                }
+            }
+        },
+        series: [
+            {
+                type: 'scatter',
+                coordinateSystem: 'geo',
+                data: mapData[0].map(function (itemOpt) {
+                    return {
+                        name: itemOpt.name,
+                        value: [
+                            itemOpt.longitude,
+                            itemOpt.latitude,
+                            itemOpt.value
+                        ],
+                        label: {
+                            emphasis: {
+                                position: 'right',
+                                show: true
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#d8854f'
+                            }
+                        },
+                    };
+                })
+            }
+        ],
+    },
+    options: []
+};;
+
+
+
+    for (var n = 0; n < timeline.length; n++) {
+        option.baseOption.timeline.data.push(timeline[n]);
+        option.options.push({
+            title: {
+                show: true,
+                'text': timeline[n]
+            },
+            geo:{
+                center:[
+                        mapData[n][0].longitude,
+                        mapData[n][0].latitude
+                    ],
+            },
+
+            series: {
+                name: timeline[n],
+                type: 'scatter',
+                coordinateSystem: 'geo',
+
+                data: mapData[n].map(function (itemOpt) {
+                    return {
+                        name: itemOpt.name,
+                        value: [
+                            itemOpt.longitude,
+                            itemOpt.latitude,
+                            itemOpt.value
+                        ],
+                        label: {
+                            emphasis: {
+                                position: 'right',
+                                show: true
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#d8854f'
+                            }
+                        },
+                    };
+                })
+            }
+        });
+    }
+
+
+
+
+    myChart.setOption(option);
+
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

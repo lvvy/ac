@@ -1,0 +1,189 @@
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 61, in log
+    print('Total', sum(bytes))
+  File "D:/ac\logs\views.py", line 60, in <genexpr>
+    bytes = (int(x) for x in bytecolumn if x != '-')
+  File "D:/ac\logs\views.py", line 59, in <genexpr>
+    bytecolumn = (line.rsplit(None,1)[1] for line in pylines)
+  File "D:/ac\logs\views.py", line 47, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 39, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Not Found: /favicon.ico
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 61, in log
+    print('Total', sum(bytes))
+  File "D:/ac\logs\views.py", line 60, in <genexpr>
+    bytes = (int(x) for x in bytecolumn if x != '-')
+  File "D:/ac\logs\views.py", line 59, in <genexpr>
+    bytecolumn = (line.rsplit(None,1)[1] for line in pylines)
+  File "D:/ac\logs\views.py", line 47, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 39, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 61, in log
+    print('Total', sum(bytes))
+  File "D:/ac\logs\views.py", line 60, in <genexpr>
+    bytes = (int(x) for x in bytecolumn if x != '-')
+  File "D:/ac\logs\views.py", line 59, in <genexpr>
+    bytecolumn = (line.rsplit(None,1)[1] for line in pylines)
+  File "D:/ac\logs\views.py", line 47, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 39, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 61, in log
+    print('Total', sum(bytes))
+  File "D:/ac\logs\views.py", line 60, in <genexpr>
+    bytes = (int(x) for x in bytecolumn if x != '-')
+  File "D:/ac\logs\views.py", line 59, in <genexpr>
+    bytecolumn = (line.rsplit(None,1)[1] for line in pylines)
+  File "D:/ac\logs\views.py", line 47, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 39, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 61, in log
+    print('Total', sum(bytes))
+TypeError: 'type' object is not iterable
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view logs.views.log didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    for ll in pylines:
+  File "D:/ac\logs\views.py", line 48, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 40, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    for ll in pylines:
+  File "D:/ac\logs\views.py", line 48, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 40, in gen_concatenate
+    yield from it
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x99 in position 1492: illegal multibyte sequence
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    for ll in pylines:
+  File "D:/ac\logs\views.py", line 49, in gen_grep
+    if pat.search(line):
+TypeError: can't use a string pattern on a bytes-like object
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    for ll in pylines:
+  File "D:/ac\logs\views.py", line 49, in gen_grep
+    if pat.search(line):
+TypeError: can't use a string pattern on a bytes-like object
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    for ll in pylines:
+  File "D:/ac\logs\views.py", line 48, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 40, in gen_concatenate
+    yield from it
+  File "E:\mysite\venv\lib\codecs.py", line 319, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xee in position 0: invalid continuation byte
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    print(len(pylines))
+TypeError: object of type 'generator' has no len()
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    print(sum(1 for x in pylines))
+  File "D:/ac\logs\views.py", line 62, in <genexpr>
+    print(sum(1 for x in pylines))
+  File "D:/ac\logs\views.py", line 48, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 40, in gen_concatenate
+    yield from it
+  File "E:\mysite\venv\lib\codecs.py", line 319, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xee in position 0: invalid continuation byte
+Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/ac\logs\views.py", line 62, in log
+    print(sum(1 for x in pylines))
+  File "D:/ac\logs\views.py", line 62, in <genexpr>
+    print(sum(1 for x in pylines))
+  File "D:/ac\logs\views.py", line 48, in gen_grep
+    for line in lines:
+  File "D:/ac\logs\views.py", line 40, in gen_concatenate
+    yield from it
+  File "E:\mysite\venv\lib\codecs.py", line 319, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xee in position 0: invalid continuation byte

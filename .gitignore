@@ -1,0 +1,20 @@
+﻿# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+.idea
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+venv
+
+# My configurations:
+db.ini
+db.sqlit3
+migrations
