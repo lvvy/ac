@@ -9,7 +9,7 @@ from libs.utils import error_handler
 
 @error_handler
 def r_index(request):
-    events = Event.objects.order_by('-begin_time').select_related().all()
+    events = Event.objects.order_by('begin_time').select_related().all()
     return render_to_response('war/index.html', {"events": events})
 
 
