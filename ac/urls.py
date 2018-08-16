@@ -18,9 +18,12 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from war.views import r_index
 
-
-
 urlpatterns = [
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve'),
+]
+
+
+urlpatterns += [
     url(r'^admin/', admin.site.urls),
     url(r'^war/', include("war.urls")),
 
