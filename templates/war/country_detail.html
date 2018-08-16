@@ -1,0 +1,17 @@
+{% extends "common/base.html" %}
+{% import "common/_carousel.html" as carousel %}
+{% import "common/_marketing.html" as marketing %}
+{% import "common/_feature.html" as feature %}
+
+{% block title %}参战国{% endblock %}
+
+
+{% block content %}
+        {{ carousel.carousel_widget(country.photos,country)}}
+    <div class="container marketing">
+        {{ marketing.mark_widget(person) }}
+            <hr class="featurette-divider">
+        {{ feature.feature_widget(event) }}
+
+    </div>
+{% endblock %}

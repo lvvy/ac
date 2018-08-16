@@ -9,23 +9,23 @@ from libs.utils import error_handler
 
 @error_handler
 def r_index(request):
-    events = Event.objects.order_by('-begin_time').select_related().all()
+    events = Event.objects.order_by('begin_time').select_related().all()
     return render_to_response('war/index.html', {"events": events})
 
 
-def r_county(request):
+def r_country(request):
     county = Country.objects.order_by('continent').select_related().all()
-    return render_to_response('war/county.html', {"county": county})
+    return render_to_response('war/country.html', {"county": county})
 
 
-def r_county_detail(request, country_id):
+def r_country_detail(request, country_id):
     country_id = int(country_id)
     country = Country.objects.filter(pk=country_id).select_related().first()
     if not country:
         return HttpResponseRedirect('/errors/404/')
     person = country.personage_set.order_by('position').all()[:3]
     event = Event.objects.filter(personage__nation=country_id).distinct().all()[:3]
-    return render_to_response('war/county_detail.html', {"country": country, 'person': person, 'event': event})
+    return render_to_response('war/country_detail.html', {"country": country, 'person': person, 'event': event})
 
 
 def r_index2(request):

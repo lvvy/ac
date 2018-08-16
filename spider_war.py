@@ -203,4 +203,4 @@ if __name__ == '__main__':
     # url = 'https://zh.wikipedia.org/wiki/%E4%B9%9D%E4%B8%80%E5%85%AB%E4%BA%8B%E8%AE%8A'
 
 
-    c = up_table(1)
+    c = up_table(3)
