@@ -14,7 +14,7 @@ $ (function () {
 
 function showToolTip(name, time, abstract) {
     $('#tooltip a').html('<h3>'+name+'</h3>');
-    $('#tooltip p:first').text('19' + time);
+    $('#tooltip p:first').text(time);
     $('#tooltip p:eq(1)').text(abstract);
     $('#tooltip').css({'display': 'block', 'position': 'absolute', 'zIndex': '1'})
 }
