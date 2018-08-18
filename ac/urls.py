@@ -18,11 +18,14 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.static import  serve
+from django.conf.urls.static import static
 from war.views import r_index
 
-urlpatterns = [
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATICFILES_DIRS}),
-]
+# urlpatterns = [
+#     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATICFILES_DIRS}),
+# ]
+
+urlpatterns = static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) + static(settings.STATICFILES_DIRS,document_root=settings.MEDIA_ROOT)
 
 
 urlpatterns += [
