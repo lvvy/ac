@@ -13,7 +13,9 @@ dist
 build
 *.log
 venv
-
+.pid
+Pipfile
+Pipfile.lock
 # My configurations:
 db.ini
 db.sqlit3
