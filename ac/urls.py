@@ -25,7 +25,7 @@ from war.views import r_index
 #     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATICFILES_DIRS}),
 # ]
 
-urlpatterns = static(settings.STATIC_URL)
+urlpatterns = static(settings.STATIC_URL, document_root=settings.STATIC_URL)
 
 
 urlpatterns += [
