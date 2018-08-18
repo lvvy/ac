@@ -24,17 +24,19 @@ from war.views import r_index
 # urlpatterns = [
 #     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATICFILES_DIRS}),
 # ]
-
-urlpatterns = static(settings.STATIC_URL, document_root=settings.STATIC_URL)
-
-
-urlpatterns += [
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^war/', include("war.urls")),
 
     url(r'^logs/', include("logs.urls")),
 
 ]
+
+for dir in settings.STATICFILES_DIRS:
+    urlpatterns += static(settings.STATIC_URL, document_root=dir)
+
+
+
 
 
 
